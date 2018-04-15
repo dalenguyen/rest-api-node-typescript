@@ -6,7 +6,8 @@ import * as mongoose from "mongoose";
 class App {
 
     public app: express.Application;
-    public routePrv: Routes = new Routes();    
+    public routePrv: Routes = new Routes();
+    public mongoUrl: string = 'mongodb://localhost/CRMdb';  
 
     constructor() {
         this.app = express();
@@ -24,7 +25,7 @@ class App {
 
     private mongoSetup(): void{
         mongoose.Promise = global.Promise;
-        mongoose.connect('mongodb://localhost/CRMdb')    
+        mongoose.connect(this.mongoUrl);    
     }
 
 }

@@ -1,14 +1,14 @@
 {
   "name": "crm",
   "version": "1.0.0",
-  "description": "",
+  "description": "An API built with NodeJS, Express, MongoDB and TypeScript",
   "main": "dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "dev": "ts-node ./lib/server.ts",        
     "start": "nodemon ./dist/server.js",
-    "prod": "npm run build && nodemon ./dist/server.js --exec babel-node -e js"
+    "prod": "npm run build && npm run start"
   },
   "keywords": [
     "Dale",
@@ -21,13 +21,6 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "mongoose": "^5.0.14",
-    "nodemon": "^1.17.3",
-    "uninstall": "0.0.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-preset-typescript": "^7.0.0-alpha.19"
+    "nodemon": "^1.17.3"
   }
 }
