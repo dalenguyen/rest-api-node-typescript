@@ -34,4 +34,13 @@ export class ContactController{
             res.json(contact);
         });
     }
+
+    public updateContact (req: Request, res: Response) {           
+        Contact.findOneAndUpdate({ _id: req.params.contactId }, req.body, { new: true }, (err, contact) => {
+            if(err){
+                res.send(err);
+            }
+            res.json(contact);
+        });
+    }
 }
