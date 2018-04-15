@@ -2,16 +2,24 @@ import * as mongoose from 'mongoose';
 import { ContactSchema } from '../models/crmModel';
 import { Request, Response } from 'express';
 
-const Contact = mongoose.model('Contact', ContactSchema);
+export class ContactController{
 
-export const addNewContact = (req: Request, res: Response) => {
-    let newContact = new Contact(req.body);
+    public Contact: any;
 
-    newContact.save((err, contact) => {
-        if(err){
-            res.send(err);
-        }
+    constructor(){
+        this.Contact = mongoose.model('Contact', ContactSchema);                
+    }    
 
-        res.json(contact);
-    });
+    public addNewContact (req: Request, res: Response) {
+        
+        let newContact = new this.Contact(req.body);
+    
+        newContact.save((err, contact) => {
+            if(err){
+                res.send(err);
+            }
+    
+            res.json(contact);
+        });
+    }
 }

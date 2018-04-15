@@ -1,8 +1,10 @@
 import {Request, Response, NextFunction} from "express";
-import { addNewContact } from "../controllers/crmController";
+import { ContactController } from "../controllers/crmController";
 
-export class Routes {        
-
+export class Routes { 
+    
+    public contactController: ContactController = new ContactController();    
+    
     public routes(app): void {   
         
         app.route('/')
@@ -26,7 +28,7 @@ export class Routes {
         })        
 
         // POST endpoint
-        .post(addNewContact);
+        .post(this.contactController.addNewContact);
 
         // Contact detail
         app.route('/contact/:contactId')
