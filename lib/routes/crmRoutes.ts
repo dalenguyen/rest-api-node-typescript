@@ -1,4 +1,5 @@
 import {Request, Response, NextFunction} from "express";
+import { addNewContact } from "../controllers/crmController";
 
 export class Routes {        
 
@@ -24,11 +25,8 @@ export class Routes {
             })
         })        
 
-        .post((req: Request, res: Response) => {            
-            res.status(200).send({
-                message: 'POST request successfulll!!!!'
-            })
-        })
+        // POST endpoint
+        .post(addNewContact);
 
         // Contact detail
         app.route('/contact/:contactId')

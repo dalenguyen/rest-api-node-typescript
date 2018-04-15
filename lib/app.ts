@@ -1,8 +1,7 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import {Request, Response} from "express";
 import { Routes } from "./routes/crmRoutes";
-import mongoose from "mongoose";
+import * as mongoose from "mongoose";
 
 class App {
 
@@ -23,9 +22,7 @@ class App {
 
     private mongoSetup(): void{
         mongoose.Promise = global.Promise;
-        mongoose.connect('mongodb://localhost/CRMdb', {
-            useMongoClient: true
-        })    
+        mongoose.connect('mongodb://localhost/CRMdb')    
     }
 
 }
