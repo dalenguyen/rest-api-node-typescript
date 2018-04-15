@@ -3,7 +3,7 @@ import { ContactController } from "../controllers/crmController";
 
 export class Routes { 
     
-    public contactController: ContactController = new ContactController();    
+    public contactController: ContactController = new ContactController() 
     
     public routes(app): void {   
         
@@ -21,11 +21,7 @@ export class Routes {
             console.log(`Request from: ${req.originalUrl}`);
             console.log(`Request type: ${req.method}`);
             next();
-        }, (req: Request, res: Response, next: NextFunction) => {
-            res.status(200).send({
-                message: 'GET request successfulll!!!!'
-            })
-        })        
+        }, this.contactController.getContacts)        
 
         // POST endpoint
         .post(this.contactController.addNewContact);
