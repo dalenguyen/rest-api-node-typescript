@@ -31,11 +31,7 @@ export class Routes {
         // get specific contact
         .get(this.contactController.getContactWithID)
         .put(this.contactController.updateContact)
-        .delete((req: Request, res: Response) => {            
-            res.status(200).send({
-                message: 'DELETE request successfulll!!!!'
-            })
-        })
+        .delete(this.contactController.deleteContact)
 
     }
 }
