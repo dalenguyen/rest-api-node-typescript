@@ -18,6 +18,8 @@ class App {
     private config(): void{
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({ extended: false }));
+        // serving static files 
+        this.app.use(express.static('public'));
     }
 
     private mongoSetup(): void{
