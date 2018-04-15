@@ -28,6 +28,8 @@ export class Routes {
 
         // Contact detail
         app.route('/contact/:contactId')
+        // get specific contact
+        .get(this.contactController.getContactWithID)
         .put((req: Request, res: Response) => {            
             res.status(200).send({
                 message: 'PUT request successfulll!!!!'
