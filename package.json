@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "dev": "ts-node ./lib/server.ts",        
+    "dev": "ts-node ./lib/server.ts",
     "start": "nodemon ./dist/server.js",
     "prod": "npm run build && npm run start"
   },
@@ -17,10 +17,10 @@
   "author": "Dale Nguyen <dungnq@itbox4vn.com> (http://dalenguyen.me)",
   "license": "ISC",
   "dependencies": {
-    "@types/express": "^4.11.1",
-    "body-parser": "^1.18.2",
-    "express": "^4.16.3",
-    "mongoose": "^5.0.14",
-    "nodemon": "^1.17.3"
+    "@types/express": "^4.16.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.7",
+    "nodemon": "^1.18.9"
   }
 }

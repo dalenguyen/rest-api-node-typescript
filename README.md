@@ -59,7 +59,7 @@ The default URL is: *http://localhost:3000*
 Send GET request to http://localhost:3000/contact/
 ```
 
-## Testing over HTTPs (tag [v2.0.0](https://github.com/dalenguyen/rest-api-node-typescript/tree/v1.0.0))
+## Testing over HTTPs (tag [v2.0.0](https://github.com/dalenguyen/rest-api-node-typescript/tree/v2.0.0))
 
 The default URL is: *https://localhost:3000*
 
